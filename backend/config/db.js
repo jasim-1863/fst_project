@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config({ path: './backend/.env' }); // Explicitly specify the path
+
+console.log('MONGO_URI:', process.env.MONGO_URI); // Add this line for debugging
+
 
 const connectDB = async () => {
   try {
